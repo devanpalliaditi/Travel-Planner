@@ -355,6 +355,12 @@
             margin: 20px 0;
         }
         
+        .price-currency {
+            font-size: 1rem;
+            vertical-align: super;
+            margin-right: 2px;
+        }
+        
         .option-action {
             text-align: center;
         }
@@ -445,7 +451,7 @@
         <div class="container">
             <div class="planner-header">
                 <h2>Plan Your Next Adventure</h2>
-                <p>Enter your travel details and discover the best options for your journey</p>
+                <p>Enter your travel details and discover the best options for your journey across India</p>
             </div>
             
             <div class="destination-form">
@@ -456,22 +462,45 @@
                 
                 <div class="input-grid">
                     <div class="input-group">
-                        <label for="from">From</label>
-                        <input type="text" id="from" placeholder="Starting point">
+                        <label for="from">From (City)</label>
+                        <input type="text" id="from" placeholder="Starting city" list="indian-cities">
                     </div>
                     
                     <div class="input-group">
-                        <label for="to">To</label>
-                        <input type="text" id="to" placeholder="Destination">
+                        <label for="to">To (City)</label>
+                        <input type="text" id="to" placeholder="Destination city" list="indian-cities">
                     </div>
                     
+                    <datalist id="indian-cities">
+                        <option value="Mumbai">
+                        <option value="Delhi">
+                        <option value="Bangalore">
+                        <option value="Hyderabad">
+                        <option value="Chennai">
+                        <option value="Kolkata">
+                        <option value="Pune">
+                        <option value="Jaipur">
+                        <option value="Ahmedabad">
+                        <option value="Lucknow">
+                        <option value="Bhopal">
+                        <option value="Goa">
+                        <option value="Shimla">
+                        <option value="Manali">
+                        <option value="Rishikesh">
+                        <option value="Varanasi">
+                        <option value="Kochi">
+                        <option value="Udaipur">
+                        <option value="Jodhpur">
+                        <option value="Amritsar">
+                    </datalist>
+                    
                     <div class="input-group">
-                        <label for="departure">Departure</label>
+                        <label for="departure">Departure Date</label>
                         <input type="date" id="departure">
                     </div>
                     
                     <div class="input-group">
-                        <label for="return">Return (optional)</label>
+                        <label for="return">Return Date (optional)</label>
                         <input type="date" id="return">
                     </div>
                     
@@ -489,9 +518,9 @@
                     <div class="input-group">
                         <label for="budget">Budget (per person)</label>
                         <select id="budget">
-                            <option value="economy">Economy</option>
-                            <option value="mid-range" selected>Mid-range</option>
-                            <option value="luxury">Luxury</option>
+                            <option value="budget">Budget (₹1,000 - ₹3,000)</option>
+                            <option value="mid-range" selected>Mid-range (₹3,000 - ₹7,000)</option>
+                            <option value="luxury">Luxury (₹7,000+)</option>
                         </select>
                     </div>
                 </div>
@@ -509,7 +538,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Travel Options</h2>
-                <p>We found these best options for your journey</p>
+                <p>We found these best options for your journey across India</p>
             </div>
             
             <div class="options-grid">
@@ -533,14 +562,18 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Comfort</span>
-                                <span class="detail-value">Luxury AC</span>
+                                <span class="detail-value">AC Sleeper</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Departure</span>
-                                <span class="detail-value">08:00 AM</span>
+                                <span class="detail-value">08:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Arrival</span>
+                                <span class="detail-value">01:30 AM</span>
                             </div>
                         </div>
-                        <div class="price">$25 <span class="detail-label">per person</span></div>
+                        <div class="price"><span class="price-currency">₹</span>1,499 <span class="detail-label">per person</span></div>
                         <div class="option-action">
                             <button class="btn btn-primary">Select Option</button>
                         </div>
@@ -563,18 +596,22 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Train</span>
-                                <span class="detail-value">Express 202</span>
+                                <span class="detail-value">Shatabdi Express</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Class</span>
-                                <span class="detail-value">First Class</span>
+                                <span class="detail-value">AC Chair Car</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Departure</span>
-                                <span class="detail-value">09:30 AM</span>
+                                <span class="detail-value">06:00 AM</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Arrival</span>
+                                <span class="detail-value">10:15 AM</span>
                             </div>
                         </div>
-                        <div class="price">$38 <span class="detail-label">per person</span></div>
+                        <div class="price"><span class="price-currency">₹</span>1,050 <span class="detail-label">per person</span></div>
                         <div class="option-action">
                             <button class="btn btn-primary">Select Option</button>
                         </div>
@@ -597,7 +634,7 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Airline</span>
-                                <span class="detail-value">Sky Airways</span>
+                                <span class="detail-value">IndiGo</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Class</span>
@@ -607,8 +644,12 @@
                                 <span class="detail-label">Departure</span>
                                 <span class="detail-value">11:45 AM</span>
                             </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Arrival</span>
+                                <span class="detail-value">01:05 PM</span>
+                            </div>
                         </div>
-                        <div class="price">$120 <span class="detail-label">per person</span></div>
+                        <div class="price"><span class="price-currency">₹</span>4,299 <span class="detail-label">per person</span></div>
                         <div class="option-action">
                             <button class="btn btn-primary">Select Option</button>
                         </div>
@@ -635,14 +676,18 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Provider</span>
-                                <span class="detail-value">DriveEasy Rentals</span>
+                                <span class="detail-value">Zoomcar</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Pickup</span>
                                 <span class="detail-value">Any time</span>
                             </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Free Kms</span>
+                                <span class="detail-value">100 km/day</span>
+                            </div>
                         </div>
-                        <div class="price">$65 <span class="detail-label">per day</span></div>
+                        <div class="price"><span class="price-currency">₹</span>2,499 <span class="detail-label">per day</span></div>
                         <div class="option-action">
                             <button class="btn btn-primary">Select Option</button>
                         </div>
@@ -723,6 +768,23 @@
         document.querySelector('.add-btn').addEventListener('click', function() {
             alert("Your itinerary is being created. This would show a summary of selected options.");
         });
+        
+        // Add Indian city suggestions to input fields
+        document.getElementById('from').addEventListener('focus', function() {
+            this.placeholder = "e.g., Mumbai, Delhi, Bangalore";
+        });
+        
+        document.getElementById('to').addEventListener('focus', function() {
+            this.placeholder = "e.g., Goa, Shimla, Jaipur";
+        });
+        
+        document.getElementById('from').addEventListener('blur', function() {
+            this.placeholder = "Starting city";
+        });
+        
+        document.getElementById('to').addEventListener('blur', function() {
+            this.placeholder = "Destination city";
+        });
     </script>
 </body>
-</html>  
+</html>

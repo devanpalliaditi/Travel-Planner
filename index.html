@@ -524,6 +524,221 @@
             transform: translateY(-2px);
         }
         
+        /* Trip Planner Section */
+        .trip-planner {
+            padding: 160px 0 80px;
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 60%, rgba(67, 97, 238, 0.05) 100%);
+        }
+        
+        .planner-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .planner-header h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .planner-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .destination-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .form-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-title i {
+            color: var(--primary);
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .input-group input, .input-group select {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        /* Travel Options Section */
+        .travel-options {
+            padding: 60px 0;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .option-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .option-header {
+            padding: 20px;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .option-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .option-body {
+            padding: 25px;
+        }
+        
+        .option-details {
+            margin-bottom: 20px;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .detail-value {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .option-action {
+            text-align: center;
+        }
+        
+        /* Add to Itinerary Button */
+        .add-itinerary {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+        
+        .add-btn {
+            background: var(--gradient);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 5px 20px rgba(67, 97, 238, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .add-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+        }
+        
+        /* User Menu in Planner */
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -628,6 +843,18 @@
             .hero-buttons {
                 justify-content: center;
             }
+            
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -644,6 +871,10 @@
             
             .hero h2 {
                 font-size: 2.5rem;
+            }
+            
+            .planner-header h2 {
+                font-size: 2.2rem;
             }
             
             .hero-buttons {
@@ -678,9 +909,12 @@
                         <li><a href="#" onclick="showPage('home-page'); document.getElementById('contact').scrollIntoView(); return false;">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="auth-buttons">
+                <div class="auth-buttons" id="auth-buttons">
                     <button class="btn btn-outline" onclick="showPage('login-page')">Login</button>
                     <button class="btn btn-primary" onclick="showPage('signup-page')">Sign Up</button>
+                </div>
+                <div class="user-menu" id="user-menu" style="display: none;">
+                    <div class="user-avatar">JS</div>
                 </div>
             </div>
         </div>
@@ -696,12 +930,12 @@
                         <h2>Plan Your Journey, Live Your Adventure</h2>
                         <p>The smart travel planner that adapts to your journey in real-time, making travel seamless and enjoyable.</p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary" onclick="showPage('signup-page')">Get Started</button>
+                            <button class="btn btn-primary" onclick="showPage('planner-page')">Get Started</button>
                             <button class="btn btn-outline" onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
                         </div>
                     </div>
                     <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Travel Planning">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="Travel Planning">
                     </div>
                 </div>
             </div>
@@ -776,7 +1010,7 @@
                         <p>Living Itinerary is a revolutionary travel planning platform that goes beyond static itineraries. We understand that travel is dynamic, and your plans should be too.</p>
                         <p>Our intelligent system continuously monitors your journey, making real-time adjustments based on weather, traffic, delays, and your personal preferences.</p>
                         <p>Whether you're planning a solo adventure, a family vacation, or a group trekking expedition, Living Itinerary ensures you have the most seamless and enjoyable experience possible.</p>
-                        <button class="btn btn-primary" onclick="showPage('signup-page')">Get Started Today</button>
+                        <button class="btn btn-primary" onclick="showPage('planner-page')">Start Planning Now</button>
                     </div>
                     <div class="about-image">
                         <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="About Us">
@@ -920,7 +1154,7 @@
                         <p>Enter your credentials to access your account</p>
                     </div>
                     
-                    <form>
+                    <form id="login-form">
                         <div class="form-group">
                             <label for="login-email">Email Address</label>
                             <input type="email" id="login-email" placeholder="Enter your email" required>
@@ -978,7 +1212,7 @@
                         <p>Fill in your details to create your account</p>
                     </div>
                     
-                    <form>
+                    <form id="signup-form">
                         <div class="form-group">
                             <label for="signup-name">Full Name</label>
                             <input type="text" id="signup-name" placeholder="Enter your full name" required>
@@ -1029,6 +1263,283 @@
         </div>
     </div>
 
+    <!-- Planner Page -->
+    <div id="planner-page" class="page-container">
+        <!-- Trip Planner Section -->
+        <section class="trip-planner">
+            <div class="container">
+                <div class="planner-header">
+                    <h2>Plan Your Next Adventure</h2>
+                    <p>Enter your travel details and discover the best options for your journey</p>
+                </div>
+                
+                <div class="destination-form">
+                    <div class="form-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Where would you like to go?</span>
+                    </div>
+                    
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label for="from">From</label>
+                            <input type="text" id="from" placeholder="Starting point">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="to">To</label>
+                            <input type="text" id="to" placeholder="Destination">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="departure">Departure</label>
+                            <input type="date" id="departure">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="return">Return (optional)</label>
+                            <input type="date" id="return">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="travelers">Travelers</label>
+                            <select id="travelers">
+                                <option value="1">1 Traveler</option>
+                                <option value="2" selected>2 Travelers</option>
+                                <option value="3">3 Travelers</option>
+                                <option value="4">4 Travelers</option>
+                                <option value="5">5+ Travelers</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="budget">Budget (per person)</label>
+                            <select id="budget">
+                                <option value="economy">Economy</option>
+                                <option value="mid-range" selected>Mid-range</option>
+                                <option value="luxury">Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="btn btn-outline">Clear</button>
+                        <button class="btn btn-primary" onclick="findOptions()">Find Options</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Options Section -->
+        <section class="travel-options">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Travel Options</h2>
+                    <p>We found these best options for your journey</p>
+                </div>
+                
+                <div class="options-grid">
+                    <!-- Bus Option -->
+                    <div class="option-card">
+                        <div class="option-header">
+                            <div class="option-icon">
+                                <i class="fas fa-bus"></i>
+                            </div>
+                            <h3>Bus Travel</h3>
+                        </div>
+                        <div class="option-body">
+                            <div class="option-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Duration</span>
+                                    <span class="detail-value">5h 30m</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Operator</span>
+                                    <span class="detail-value">GreenLine Travels</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Comfort</span>
+                                    <span class="detail-value">Luxury AC</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Departure</span>
+                                    <span class="detail-value">08:00 AM</span>
+                                </div>
+                            </div>
+                            <div class="price">$25 <span class="detail-label">per person</span></div>
+                            <div class="option-action">
+                                <button class="btn btn-primary">Select Option</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Train Option -->
+                    <div class="option-card">
+                        <div class="option-header">
+                            <div class="option-icon">
+                                <i class="fas fa-train"></i>
+                            </div>
+                            <h3>Train Journey</h3>
+                        </div>
+                        <div class="option-body">
+                            <div class="option-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Duration</span>
+                                    <span class="detail-value">4h 15m</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Train</span>
+                                    <span class="detail-value">Express 202</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">First Class</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Departure</span>
+                                    <span class="detail-value">09:30 AM</span>
+                                </div>
+                            </div>
+                            <div class="price">$38 <span class="detail-label">per person</span></div>
+                            <div class="option-action">
+                                <button class="btn btn-primary">Select Option</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flight Option -->
+                    <div class="option-card">
+                        <div class="option-header">
+                            <div class="option-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                            <h3>Flight</h3>
+                        </div>
+                        <div class="option-body">
+                            <div class="option-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Duration</span>
+                                    <span class="detail-value">1h 20m</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Airline</span>
+                                    <span class="detail-value">Sky Airways</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Class</span>
+                                    <span class="detail-value">Economy</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Departure</span>
+                                    <span class="detail-value">11:45 AM</span>
+                                </div>
+                            </div>
+                            <div class="price">$120 <span class="detail-label">per person</span></div>
+                            <div class="option-action">
+                                <button class="btn btn-primary">Select Option</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Car Rental Option -->
+                    <div class="option-card">
+                        <div class="option-header">
+                            <div class="option-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <h3>Car Rental</h3>
+                        </div>
+                        <div class="option-body">
+                            <div class="option-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Duration</span>
+                                    <span class="detail-value">Self-driven</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Vehicle</span>
+                                    <span class="detail-value">SUV (5 seater)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Provider</span>
+                                    <span class="detail-value">DriveEasy Rentals</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Pickup</span>
+                                    <span class="detail-value">Any time</span>
+                                </div>
+                            </div>
+                            <div class="price">$65 <span class="detail-label">per day</span></div>
+                            <div class="option-action">
+                                <button class="btn btn-primary">Select Option</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add to Itinerary Button -->
+        <div class="add-itinerary">
+            <div class="add-btn">
+                <i class="fas fa-plus"></i>
+                <span>Add to My Itinerary</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Living Itinerary</h3>
+                        <p>The smart travel planner that adapts to your journey in real-time, making travel seamless and enjoyable.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#" onclick="showPage('home-page'); return false;">Home</a></li>
+                            <li><a href="#" onclick="showPage('home-page'); document.getElementById('features').scrollIntoView(); return false;">Features</a></li>
+                            <li><a href="#" onclick="showPage('home-page'); document.getElementById('about').scrollIntoView(); return false;">About</a></li>
+                            <li><a href="#" onclick="showPage('home-page'); document.getElementById('contact').scrollIntoView(); return false;">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><a href="#">Dynamic Itinerary</a></li>
+                            <li><a href="#">Breakdown Assistance</a></li>
+                            <li><a href="#">Cost Management</a></li>
+                            <li><a href="#">Weather Integration</a></li>
+                            <li><a href="#">Group Trips</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2023 Living Itinerary. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
     <script>
         // Function to show specific page and hide others
         function showPage(pageId) {
@@ -1060,8 +1571,57 @@
         document.querySelectorAll('form').forEach(form => {
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert('Form submission would be handled in a real application.');
+                
+                if (this.id === 'login-form' || this.id === 'signup-form') {
+                    // Simulate successful login/signup
+                    document.getElementById('auth-buttons').style.display = 'none';
+                    document.getElementById('user-menu').style.display = 'flex';
+                    showPage('planner-page');
+                } else {
+                    alert('Form submission would be handled in a real application.');
+                }
             });
+        });
+        
+        // Function to find travel options
+        function findOptions() {
+            const from = document.getElementById('from').value;
+            const to = document.getElementById('to').value;
+            
+            if (!from || !to) {
+                alert("Please enter both starting point and destination");
+                return;
+            }
+            
+            // Scroll to options section
+            document.querySelector('.travel-options').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        
+        // Set minimum date for departure to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('departure').setAttribute('min', today);
+        
+        // Set return date to 1 day after departure by default
+        document.getElementById('departure').addEventListener('change', function() {
+            const departureDate = new Date(this.value);
+            departureDate.setDate(departureDate.getDate() + 1);
+            const nextDay = departureDate.toISOString().split('T')[0];
+            document.getElementById('return').setAttribute('min', nextDay);
+        });
+        
+        // Select option buttons
+        document.querySelectorAll('.option-action .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const optionType = this.closest('.option-card').querySelector('h3').textContent;
+                alert(`You selected the ${optionType} option. This would be added to your itinerary.`);
+            });
+        });
+        
+        // Add to itinerary button
+        document.querySelector('.add-btn').addEventListener('click', function() {
+            alert("Your itinerary is being created. This would show a summary of selected options.");
         });
     </script>
 </body>
